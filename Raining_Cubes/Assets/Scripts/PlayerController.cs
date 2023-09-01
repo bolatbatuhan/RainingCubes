@@ -2,25 +2,28 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using Unity.VisualScripting;
+using UnityEditor.SearchService;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-    
-    
-    public float hiz;
+
+
+    float hiz = 10.0f;
     public ParticleSystem efekt;
-    float can = 100.0f;
-    float suan_ki_can = 100.0f;
+    public float can = 100.0f;
+    public float suan_ki_can;
 
     Image HealthBar;
 
     private void Start()
     {
+        
         efekt.Stop();
+        suan_ki_can = can;
         HealthBar = GameObject.Find("Canvas/HealthBar/Health").GetComponent<Image>();
-
+        HealthBar.fillAmount = suan_ki_can / can;
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -34,21 +37,18 @@ public class PlayerController : MonoBehaviour
             suan_ki_can -= 10.0f;
             HealthBar.fillAmount = suan_ki_can / can;
 
-
+            
+            
         }
     }
 
+   
 
     void Update()
     {
-        if(Input.GetKey(KeyCode.RightArrow)) 
-        {
-            transform.Translate(hiz * Time.deltaTime, 0, 0);
-        }
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            transform.Translate(-hiz * Time.deltaTime, 0, 0);
-        }
+        float rotation = Input.GetAxis("Horizontal") * hiz;
+        rotation *= Time.deltaTime;
+        transform.Translate(rotation, 0, 0, Space.World);
         
     }
 }

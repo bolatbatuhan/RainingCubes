@@ -632,6 +632,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: platform 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8587418401512697802, guid: 84ca637a624526d4abffdb344ab604ae, type: 3}
+      propertyPath: hiz
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

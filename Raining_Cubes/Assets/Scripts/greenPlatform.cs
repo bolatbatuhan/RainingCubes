@@ -4,20 +4,15 @@ using UnityEngine;
 
 public class greenPlatform : MonoBehaviour
 {
-    public float hiz;
-
+    float hiz = 10.0f;
+    
     
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.RightArrow))
-        {
-            transform.Translate(hiz * Time.deltaTime, 0, 0);
-        }
-        if (Input.GetKey(KeyCode.LeftArrow))
-        {
-            transform.Translate(-hiz * Time.deltaTime, 0, 0);
-        }
+        float rotationH = Input.GetAxis("Horizontal") * hiz;
+        rotationH = rotationH * Time.deltaTime;
+        transform.Translate(rotationH, 0, 0, Space.World);
     }
 }
