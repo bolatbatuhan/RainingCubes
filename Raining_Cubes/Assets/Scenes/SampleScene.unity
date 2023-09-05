@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &82599391 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7734877007884923748, guid: 84ca637a624526d4abffdb344ab604ae, type: 3}
+  m_PrefabInstance: {fileID: 1761603979}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &186981231
 GameObject:
   m_ObjectHideFlags: 0
@@ -970,7 +975,7 @@ Transform:
   m_GameObject: {fileID: 1072680676}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.4, y: 0.7, z: 43.942886}
+  m_LocalPosition: {x: 11.64, y: 1.81, z: 43.942886}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -989,6 +994,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   kup: {fileID: 6589601712157427806, guid: bc020e598ceaa3c49a925da5f7bf3d98, type: 3}
+  platform1: {fileID: 2097512842}
+  platform2: {fileID: 82599391}
+  can: 100
+  suan_ki_can: 0
 --- !u!1 &1341156832
 GameObject:
   m_ObjectHideFlags: 0
@@ -1428,6 +1437,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1824866462}
   m_CullTransparentMesh: 1
+--- !u!1 &2097512842 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7734877007884923748, guid: 84ca637a624526d4abffdb344ab604ae, type: 3}
+  m_PrefabInstance: {fileID: 788746635}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2101936449
 GameObject:
   m_ObjectHideFlags: 0

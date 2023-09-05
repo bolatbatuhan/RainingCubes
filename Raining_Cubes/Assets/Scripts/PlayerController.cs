@@ -12,10 +12,11 @@ public class PlayerController : MonoBehaviour
 
     float hiz = 10.0f;
     public ParticleSystem efekt;
+    Image HealthBar;
     public float can = 100.0f;
     public float suan_ki_can;
 
-    Image HealthBar;
+
 
     private void Start()
     {
@@ -37,8 +38,8 @@ public class PlayerController : MonoBehaviour
             suan_ki_can -= 10.0f;
             HealthBar.fillAmount = suan_ki_can / can;
 
-            
-            
+
+
         }
     }
 
